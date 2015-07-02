@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <include layout="@layout/navigation_bar" />
+
+    <RelativeLayout
+        android:id="@+id/senders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.msg.send.Widget.CustomTextView
+            android:id="@+id/txtFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:text="Senders Info:"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.msg.send.Widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="150dp"
+                android:text="Senders Number "
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <com.msg.send.Widget.CustomEditText
+                android:id="@+id/txtSNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="150dp"
+                android:hint="Your Mobile Number" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- <Space
+         android:layout_width="1dp"
+         android:layout_height="30dp"
+         android:layout_below="@id/senders"/>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/senders"
+        android:background="@android:color/darker_gray">
+
+        <com.msg.send.Widget.CustomTextView
+            android:id="@+id/txtTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:text="Receivers Info:"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.msg.send.Widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="100dp"
+                android:text="Receiver Number "
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <com.msg.send.Widget.CustomEditText
+                android:id="@+id/txtRNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="100dp"
+                android:hint="Mobile Number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.msg.send.Widget.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="150dp"
+                android:hint="Give your Content"
+                android:lines="4"
+                android:scrollbars="vertical" />
+
+            <com.msg.send.Widget.CustomButton
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Save" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
